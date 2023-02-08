@@ -6,7 +6,6 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Tim Riedel
 Katherine Lockman
  
 Further Information:
@@ -36,8 +35,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var allergy_count = 0;//this variable counts the "allergy" answers
+        var cold_count = 0;//this variable counts the "cold" allergies
 
 
         function allergyAdd(){
@@ -97,12 +96,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p>    
+		<a href="#two" class="w3-btn w3-black"> Go to Page Two </a>
     	</div>
 </div>
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
+		<h1>Do you have a fever?</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
