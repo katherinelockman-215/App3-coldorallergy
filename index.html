@@ -43,12 +43,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             allergy_count = allergy_count + 1;// telling it to add 1 everytime they click an "allergy" answer
 		alert(allergy_count);// tells the computer to send pop up alert
 
-        };
+        }
 
         function coldAdd(){
             cold_count = cold_count + 1;//telling it to add 1 everytime they click a "cold" answer
 		alert(cold_count);// tells the computer to send pop up alert
-        };
+        }
 	
 	function resultPercentage();{
 		var AllergyPercent = (allergy_count/6)*100;//this is telling it to find the percentage of allergy answers
@@ -206,7 +206,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Results</p>
 		<a onclick="resultPercentage();" class="w3-btn w3-blue w3-round"> see results </a> <!--should be the button that reveals the results-->
-		<p id="results" ></p>
+		<p id="results" ></p> <!-- this identifies the results location for the function to work-->
 	</div>
 </div>	
 
