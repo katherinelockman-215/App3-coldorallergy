@@ -50,11 +50,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		alert(cold_count);// tells the computer to send pop up alert
         };
 	
-	function resultsPercentage();{
-		var resultText = document.getElementbyId("seven");
+	function resultPercentage();{
+		var resultText = document.getElementById("seven");
 		var AllergyPercent = (allergy_count/6)*100;//this is telling it to find the percentage of allergy answers
 		var ColdPercent = (cold_count/6)*100;// dividing by 6 because I had 6 questions then multiplying by 100 to get the percent of cold answers
-		element.innerHTML = "Probability it is allergies = " + AllergyPercent + "%" + "<br> Probability it is a cold = " + ColdPercent + "%";//this displays the text it will show as well as telling the computer the algorithm for finding the percent
+		resultText.innerHTML = "Probability it is allergies = " + AllergyPercent + "%" + "<br> Probability it is a cold = " + ColdPercent + "%";//this displays the text it will show as well as telling the computer the algorithm for finding the percent
 		}
   </script>
 
@@ -205,7 +205,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 							    
 	<div id="content" class="w3-container">
 		<p>Results</p>
-		<a onclick="resultsPercentage();" class="w3-btn w3-blue w3-round"> see results </a> <!--should be the button that reveals the results-->
+		<a onclick="resultPercentage();" class="w3-btn w3-blue w3-round"> see results </a> <!--should be the button that reveals the results-->
 	</div>
 </div>	
 
