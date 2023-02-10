@@ -53,8 +53,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function resultsPercentage();{
 		var resultText = document.getElementbyId("seven");
 		var AllergyPercent = (allergy_count/6)*100;//this is telling it to find the percentage of allergy answers
-		var ColdPercent = (cold_count/6)*100;// dividing by 6 because I had 6 questions
-		resultText.innerHTML = "Probability it is allergies = " + AllergyPercent + "%" + "<br> Probability it is a cold = " + ColdPercent + "%";//this displays the text it will show as well as telling the computer the algorithm for finding the percent
+		var ColdPercent = (cold_count/6)*100;// dividing by 6 because I had 6 questions then multiplying by 100 to get the percent of cold answers
+		element.innerHTML = "Probability it is allergies = " + AllergyPercent + "%" + "<br> Probability it is a cold = " + ColdPercent + "%";//this displays the text it will show as well as telling the computer the algorithm for finding the percent
 		}
   </script>
 
