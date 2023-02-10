@@ -40,16 +40,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
         function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
+            allergy_count = allergy_count + 1;// telling it to add 1 everytime they click an "allergy" answer
+		alert(allergy_count);// tells the computer to send pop up alert
 
-        }
+        };
 
         function coldAdd(){
-            cold_count = cold_count + 1;
-		alert(cold_count);
-        }
-
+            cold_count = cold_count + 1;//telling it to add 1 everytime they click a "cold" answer
+		alert(cold_count);// tells the computer to send pop up alert
+        };
+	
+	function resultsPercentage();{
+		var resultText = document.getElementbyId("seven");
+		var AllergyPercent = (allergy_count/6)*100;//this is telling it to find the percentage of allergy answers
+		var ColdPercent = (cold_count/6)*100;// dividing by 6 because I had 6 questions
+		resultText.innerHTML = "Probability it is allergies = " + AllergyPercent + "%" + "<br> Probability it is a cold = " + ColdPercent + "%";//this displays the text it will show as well as telling the computer the algorithm for finding the percent
+		}
   </script>
 
 
@@ -103,20 +109,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div><!--/content-->
 	</div> <!-- make sure to end with 2 "</div> -->
 
-	<footer class="w3-bottom w3-container w3-flat-carrot">
+	<footer class="w3-bottom w3-container w3-flat-carrot"> <!-- this starts the footer-->
 	<p>DIY!</p>
 </footer> <!-- include the footer on all pages -->
 		
 	
-<div class="page" id="two">
+<div class="page" id="two"> <!-- new id for each page so the buttons will advance to the correctly labeled page -->
 	<div id="header" class="w3-container w3-flat-carrot"> <!--title-->
 		<h1>Question 2</h1>
 	</div>
 		
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p> <!--question-->
-		<a href="#three" onclick="coldAdd();" class="w3-btn w3-blue w3-round"> yes </a> <!-- fixed the black button-->
-		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-blue w3-round"> no </a>
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-blue w3-round"> yes </a> <!-- shape/style of button-->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-blue w3-round"> no </a> <!-- onclick tells it to add 1 count respecively for everytime they click "allergy" or "cold" answer-->
 	</div>
 </div>	
 
@@ -199,7 +205,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 							    
 	<div id="content" class="w3-container">
 		<p>Results</p>
-		<a href="#header" class="w3-btn w3-blue w3-round"> retry </a>
+		<a href="#header" onclick="resultsPercentage();" class="w3-btn w3-blue w3-round"> see results </a>
 	</div>
 </div>	
 
